@@ -4,7 +4,7 @@ package com.forgus.wechat.sdk.constant;
  * 二维码类型
  * @author Wenbin Chen
  */
-public enum QRTypeEnum {
+public enum QrCodeTypeEnum {
     /**
     整型临时二维码
      */

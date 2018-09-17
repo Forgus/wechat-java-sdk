@@ -11,6 +11,5 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public abstract class BaseTest {
 
-    protected final String openId = "oGfLf0v7oZ92ypEA9EDhnb-q1vaw";
 
 }

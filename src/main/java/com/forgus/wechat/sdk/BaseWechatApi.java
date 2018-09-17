@@ -42,11 +42,13 @@ public class BaseWechatApi {
 
     public static <T> T get(String url, Class<T> clazz) throws Exception {
         String result = HttpClientUtil.get(url, null, Consts.UTF_8);
+        logger.info("get request with response:{}",result);
         return JSON.parseObject(result, clazz);
     }
 
     public static <T> T post(String url, String postContext, Class<T> clazz) throws Exception {
         String result = HttpClientUtil.post(url, postContext, null, Consts.UTF_8);
+        logger.info("post request with params:{}",postContext);
         return JSON.parseObject(result, clazz);
     }
 }

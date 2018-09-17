@@ -51,5 +51,9 @@ public enum ButtonTypeEnum {
     /**
      * 小程序
      */
-    miniprogram
+    miniprogram,
+    /**
+     * 二级菜单
+     */
+    sub_button
 }
