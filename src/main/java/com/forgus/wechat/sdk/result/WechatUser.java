@@ -1,6 +1,6 @@
 package com.forgus.wechat.sdk.result;
 
-import com.pingpongx.wechat.api.result.base.BaseResult;
+import com.forgus.wechat.sdk.result.base.BaseResult;
 import lombok.Data;
 
 /**

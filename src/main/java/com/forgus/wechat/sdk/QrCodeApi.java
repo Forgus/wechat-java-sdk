@@ -2,8 +2,6 @@ package com.forgus.wechat.sdk;
 
 
 import com.forgus.wechat.sdk.constant.QRTypeEnum;
-import com.forgus.wechat.sdk.result.AppAccessToken;
-import com.forgus.wechat.sdk.result.AppJsApiTicket;
 import com.forgus.wechat.sdk.result.QrCode;
 
 /**
@@ -11,31 +9,10 @@ import com.forgus.wechat.sdk.result.QrCode;
  */
 public class QrCodeApi extends BaseWechatApi {
 
-    private final static String API_URL = "https://api.weixin.qq.com";
-    private final static String APP_ID = "wx0d4d7ac5b62ca48a";
-    private final static String APP_SECRET = "ba94f3584963cdc744040023415fc3fb";
-    private final static String GET_ACCESS_TOKEN_URL_TEMPLATE = "%s/cgi-bin/token?grant_type=client_credential&appid=%s&secret=%s";
-    private final static String GET_JSAPI_TICKET_URL_TEMPLATE = "%s/cgi-bin/ticket/getticket?type=jsapi&access_token=%s";
     private final static String CREATE_QR_CODE_URL_TEMPLATE = "%s/cgi-bin/qrcode/create?access_token=%s";
     private final static String QR_CODE_INTEGER_PARAM_TEMPLATE = "{\"action_name\": \"%s\", \"expire_seconds\":%s, \"action_info\": {\"scene\": {\"scene_id\": %s}}}";
     private final static String QR_CODE_STRING_PARAM_TEMPLATE = "{\"action_name\": \"%s\", \"expire_seconds\":%s, \"action_info\": {\"scene\": {\"scene_str\": %s}}}";
 
-
-    public static AppAccessToken getAppAccessToken() throws Exception {
-        String url = String.format(GET_ACCESS_TOKEN_URL_TEMPLATE, API_URL, APP_ID, APP_SECRET);
-        return get(url, AppAccessToken.class);
-    }
-
-    public static void refreshAppAccessToken() throws Exception {
-        AppAccessToken accessTokenResult = getAppAccessToken();
-        accessToken = accessTokenResult.getAccess_token();
-    }
-
-    public static void refreshJsApiTicket() throws Exception {
-        String url = String.format(GET_JSAPI_TICKET_URL_TEMPLATE, API_URL, accessToken);
-        AppJsApiTicket appJsApiTicket = get(url, AppJsApiTicket.class);
-        jsApiTicket = appJsApiTicket.getTicket();
-    }
 
     public static String getAccessToken() {
         return accessToken;

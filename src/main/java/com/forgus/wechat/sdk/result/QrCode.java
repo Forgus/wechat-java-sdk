@@ -1,6 +1,6 @@
 package com.forgus.wechat.sdk.result;
 
-import com.pingpongx.wechat.api.result.base.BaseResult;
+import com.forgus.wechat.sdk.result.base.BaseResult;
 
 /**
  * Created by Nick on 21/11/2016.
