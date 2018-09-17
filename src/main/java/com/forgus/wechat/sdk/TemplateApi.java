@@ -10,9 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 模板消息借口
- * <p>
- * Created by Nick on 21/11/2016.
+ * 模板消息Api
  */
 public class TemplateApi extends BaseWechatApi {
 
