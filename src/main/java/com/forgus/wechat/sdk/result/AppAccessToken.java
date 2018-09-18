@@ -9,7 +9,13 @@ import com.forgus.wechat.sdk.result.base.BaseResult;
 public class AppAccessToken extends BaseResult {
     private static final long serialVersionUID = 9072086434152037813L;
 
+    /**
+     * 获取到的凭证
+     */
     private String access_token;
+    /**
+     * 凭证有效时间，单位：秒
+     */
     private String expires_in;
 
     public String getAccess_token() {
